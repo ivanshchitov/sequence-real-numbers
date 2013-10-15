@@ -1,0 +1,10 @@
+Sequence: |1.0|1.0|2.0|3.0|2.0|5.0|
+Maximum number: 5.0
+Minimum number: 1.0
+Average number: 2.3333333333333335
+Median of sequence: 2.0
+Mods: 
+1.0| ##
+2.0| ##
+3.0| #
+5.0| #

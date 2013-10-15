@@ -4,3 +4,10 @@
 *.jar
 *.war
 *.ear
+
+# Folders #
+.idea/*
+out/*s
+
+# Kubuntu files #
+.directory
