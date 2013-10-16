@@ -12,15 +12,14 @@ import java.util.InputMismatchException;
  *
  * @author Ivan Shchitov
  */
-public class SequenceAnalyzer {
+class SequenceAnalyzer {
     /**
      * Constructor.
      *
      * @param args command line arguments: names files.
-     * @throws FileNotFoundException if not correct file name,
-     *                               ArrayIndexOutOfBoundsException if no input file
+     * @throws FileNotFoundException if not correct file name
      */
-    public SequenceAnalyzer(String[] args) throws FileNotFoundException {
+    SequenceAnalyzer(String[] args) throws FileNotFoundException {
         if (args.length == 0) {
             throw new ArrayIndexOutOfBoundsException("No input file.");
         }
@@ -72,7 +71,7 @@ public class SequenceAnalyzer {
      * @param printWriter         text-output stream
      * @throws FileNotFoundException if not correct file name
      */
-    public void outputSequenceData(SequenceRealNumbers sequenceRealNumbers,
+    private void outputSequenceData(SequenceRealNumbers sequenceRealNumbers,
                                    PrintWriter printWriter) throws FileNotFoundException {
         sequenceRealNumbers.printSequence(printWriter);
         printWriter.println("Maximum number: " + sequenceRealNumbers.getMaximum());
