@@ -18,9 +18,8 @@ public final class Main {
      * Main function.
      *
      * @param args The command line arguments
-     * @throws FileNotFoundException if not correct file name
      */
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
         try {
             new SequenceAnalyzer(args);
         } catch (ArrayIndexOutOfBoundsException e) {
