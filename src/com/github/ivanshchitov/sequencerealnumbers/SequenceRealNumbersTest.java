@@ -103,19 +103,35 @@ public class SequenceRealNumbersTest {
     }
 
     /**
-     * Tests getAverage() method.
+     * Tests getAverage() method with sum elements = 0.
      */
     @Test
-    public void getAverageTest() {
+    public void getAverageTest1() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
-        sequenceTest.add(2);
-        sequenceTest.add(3);
+        sequenceTest.add(0);
+        sequenceTest.add(-1);
         assertEquals(
-                Double.doubleToLongBits(2),
+                Double.doubleToLongBits(0),
                 Double.doubleToLongBits(sequenceTest.getAverage())
         );
-        System.out.println("Finished test on getAverage() method.");
+        System.out.println("Finished test on getAverage() method with sum elements = 0.");
+    }
+
+    /**
+     * Tests getAverage() method with same elements.
+     */
+    @Test
+    public void getAverageTest2() {
+        SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
+        sequenceTest.add(1.0);
+        sequenceTest.add(1.0);
+        sequenceTest.add(1);
+        assertEquals(
+                Double.doubleToLongBits(1),
+                Double.doubleToLongBits(sequenceTest.getAverage())
+        );
+        System.out.println("Finished test on getAverage() method with same elements.");
     }
 
     /**
@@ -124,12 +140,10 @@ public class SequenceRealNumbersTest {
     @Test
     public void evenSizeSequenceMedian() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
-        sequenceTest.add(1.0);
+        sequenceTest.add(2.0);
         sequenceTest.add(0.2);
-        sequenceTest.add(3);
-        sequenceTest.add(4);
         assertEquals(
-                Double.doubleToLongBits(2),
+                Double.doubleToLongBits(1.1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
         );
         System.out.println("Finished test on getMedian() method with even size.");
@@ -142,8 +156,6 @@ public class SequenceRealNumbersTest {
     public void unevenSizeSequenceMedian() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
-        sequenceTest.add(0.2);
-        sequenceTest.add(3);
         assertEquals(
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
