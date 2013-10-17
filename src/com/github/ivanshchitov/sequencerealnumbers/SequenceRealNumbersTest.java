@@ -13,19 +13,48 @@ import static org.junit.Assert.assertEquals;
 public class SequenceRealNumbersTest {
 
     /**
-     * Tests getMaximum() method.
+     * Tests getMaximum() method with one element.
      */
     @Test
-    public void getMaximumTest() {
+    public void getMaximumTest1() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
-        sequenceTest.add(0.2);
-        sequenceTest.add(3);
         assertEquals(
-                Double.doubleToLongBits(3),
+                Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished test on getMaximum() method.");
+        System.out.println("Finished test on getMaximum() method with one element.");
+    }
+
+    /**
+     * Tests getMaximum() method with same elements.
+     */
+    @Test
+    public void getMaximumTest2() {
+        SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
+        sequenceTest.add(1.0);
+        sequenceTest.add(1.0);
+        sequenceTest.add(1.0);
+        assertEquals(
+                Double.doubleToLongBits(1),
+                Double.doubleToLongBits(sequenceTest.getMaximum())
+        );
+        System.out.println("Finished test on getMaximum() method with same elements.");
+    }
+
+    /**
+     * Tests getMaximum() method with negative elements.
+     */
+    @Test
+    public void getMaximumTest3() {
+        SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
+        sequenceTest.add(-1.0);
+        sequenceTest.add(-2.0);
+        assertEquals(
+                Double.doubleToLongBits(-1),
+                Double.doubleToLongBits(sequenceTest.getMaximum())
+        );
+        System.out.println("Finished test on getMaximum() method with negative elements.");
     }
 
     /**
@@ -61,18 +90,10 @@ public class SequenceRealNumbersTest {
     }
 
     /**
-     * Tests getMedian() method.
+     * Tests getMedian() with an even size of sequence.
      */
     @Test
-    public void getMedianTest() {
-        evenSizeSequenceMedian();
-        unevenSizeSequenceMedian();
-    }
-
-    /**
-     * Checks the method with an even size of sequence.
-     */
-    private void evenSizeSequenceMedian() {
+    public void evenSizeSequenceMedian() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
         sequenceTest.add(0.2);
@@ -86,9 +107,10 @@ public class SequenceRealNumbersTest {
     }
 
     /**
-     * Checks the method with an even size of sequence.
+     * Tests getMedian() with an even size of sequence.
      */
-    private void unevenSizeSequenceMedian() {
+    @Test
+    public void unevenSizeSequenceMedian() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
         sequenceTest.add(0.2);
