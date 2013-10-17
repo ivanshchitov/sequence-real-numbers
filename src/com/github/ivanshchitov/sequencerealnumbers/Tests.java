@@ -10,7 +10,7 @@ import static org.junit.Assert.assertEquals;
  *
  * @author Ivan Shchitov
  */
-public class SequenceRealNumbersTest {
+public class Tests {
 
     /**
      * Tests getMaximum() method with one element.
