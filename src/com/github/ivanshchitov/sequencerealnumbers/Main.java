@@ -1,6 +1,7 @@
 package com.github.ivanshchitov.sequencerealnumbers;
 
 import java.io.FileNotFoundException;
+import java.util.NoSuchElementException;
 
 /**
  * The main class.
@@ -27,6 +28,10 @@ public final class Main {
         } catch (FileNotFoundException e) {
             System.out.println("Error. Not this file name: " + args[0]
                     + ". Enter correct file name.");
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Error. You enter 0 as size of sequence.");
+        } catch (NoSuchElementException e) {
+            System.out.println("Error. Your input file is empty.");
         }
     }
 }

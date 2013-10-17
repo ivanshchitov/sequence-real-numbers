@@ -80,6 +80,9 @@ public class SequenceRealNumbers {
      */
     public double getMedian() {
         Collections.sort(sequence);
+        // При четном количестве элементов этот код верен, т. к.
+        // отсчет элементов с нуля, поэтому и обращаемся к правому
+        // элементу из двух центральных.
         double median = sequence.get(sequence.size() / 2);
         if (sequence.size() % 2 == 0) {
             median = (median + sequence.get(sequence.size() / 2 - 1)) / 2;

@@ -3,6 +3,7 @@ package com.github.ivanshchitov.sequencerealnumbers;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.NoSuchElementException;
 import java.util.Scanner;
 import java.util.Locale;
 import java.util.InputMismatchException;
@@ -24,9 +25,8 @@ class SequenceAnalyzer {
             throw new ArrayIndexOutOfBoundsException("No input file.");
         }
         Scanner scanner = new Scanner(new File(args[0]));
-        scanner.useLocale(Locale.US);
         SequenceRealNumbers sequenceRealNumbers = new SequenceRealNumbers();
-        int sizeSequence = scanner.nextInt();
+        int sizeSequence = getSizeSequence(scanner);
         inputSequence(scanner, sequenceRealNumbers, sizeSequence);
         scanner.close();
         if (args.length == 1) {
@@ -34,6 +34,23 @@ class SequenceAnalyzer {
         } else {
             outputSequenceData(sequenceRealNumbers, new PrintWriter(new File(args[1])));
         }
+    }
+
+    /**
+     * Read size sequence from input file.
+     *
+     * @param scanner input file scanner
+     * @return size of the sequence
+     */
+    private int getSizeSequence(Scanner scanner) {
+        if (!scanner.hasNext()) {
+            throw new NoSuchElementException("Input file is empty.");
+        }
+        int sizeSequence = scanner.nextInt();
+        if (sizeSequence == 0) {
+            throw new IndexOutOfBoundsException("Size sequence = 0.");
+        }
+        return sizeSequence;
     }
 
     /**
