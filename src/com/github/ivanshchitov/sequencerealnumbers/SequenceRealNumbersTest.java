@@ -23,7 +23,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished test on getMaximum() method with one element.");
+        System.out.println("Finished getMaximumTest1.");
     }
 
     /**
@@ -39,7 +39,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished test on getMaximum() method with same elements.");
+        System.out.println("Finished getMaximumTest2.");
     }
 
     /**
@@ -54,7 +54,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(-1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished test on getMaximum() method with negative elements.");
+        System.out.println("Finished getMaximumTest3.");
     }
 
     /**
@@ -68,7 +68,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished test on getMinimum() method with one element.");
+        System.out.println("Finished getMinimumTest1.");
     }
 
     /**
@@ -84,7 +84,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished test on getMinimum() method with same element.");
+        System.out.println("Finished getMinimumTest2.");
     }
 
     /**
@@ -99,7 +99,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(-2),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished test on getMinimum() method with negative element.");
+        System.out.println("Finished getMinimumTest3.");
     }
 
     /**
@@ -115,7 +115,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(0),
                 Double.doubleToLongBits(sequenceTest.getAverage())
         );
-        System.out.println("Finished test on getAverage() method with sum elements = 0.");
+        System.out.println("Finished getAverageTest1.");
     }
 
     /**
@@ -131,7 +131,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getAverage())
         );
-        System.out.println("Finished test on getAverage() method with same elements.");
+        System.out.println("Finished getAverageTest2.");
     }
 
     /**
@@ -146,7 +146,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1.1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
         );
-        System.out.println("Finished test on getMedian() method with even size.");
+        System.out.println("Finished evenSizeSequenceMedian.");
     }
 
     /**
@@ -160,7 +160,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
         );
-        System.out.println("Finished test on getMedian() method with uneven size.");
+        System.out.println("Finished unevenSizeSequenceMedian.");
     }
 
     /**
@@ -176,7 +176,7 @@ public class SequenceRealNumbersTest {
                 Double.doubleToLongBits(3),
                 Double.doubleToLongBits(sequenceTest.getSize())
         );
-        System.out.println("Finished test on getSize() method.");
+        System.out.println("Finished getSizeTest.");
     }
 
     /**
@@ -189,8 +189,7 @@ public class SequenceRealNumbersTest {
         try {
             sequenceTest.getElement(-1);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Finished test on getElement() method.\n"
-                    + "We caught ArrayIndexOutOfBoundsException.");
+            System.out.println("Finished getElementTest.");
         }
     }
 }
