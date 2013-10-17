@@ -186,12 +186,11 @@ public class SequenceRealNumbersTest {
     public void getElementTest() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
-        sequenceTest.add(0.2);
-        sequenceTest.add(3);
-        assertEquals(
-                Double.doubleToLongBits(3),
-                Double.doubleToLongBits(sequenceTest.getElement(2))
-        );
-        System.out.println("Finished test on getElement() method.");
+        try {
+            sequenceTest.getElement(-1);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Finished test on getElement() method.\n"
+                    + "We caught ArrayIndexOutOfBoundsException.");
+        }
     }
 }

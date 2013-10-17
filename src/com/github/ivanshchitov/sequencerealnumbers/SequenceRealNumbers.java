@@ -104,8 +104,9 @@ public class SequenceRealNumbers {
      *
      * @param index element index of sequence
      * @return sequence element
+     * @throws ArrayIndexOutOfBoundsException if index is not valid
      */
-    public double getElement(int index) {
+    public double getElement(int index) throws ArrayIndexOutOfBoundsException {
             return sequence.get(index);
     }
 
