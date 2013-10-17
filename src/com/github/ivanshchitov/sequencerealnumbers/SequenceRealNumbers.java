@@ -1,6 +1,5 @@
 package com.github.ivanshchitov.sequencerealnumbers;
 
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -104,26 +103,20 @@ public class SequenceRealNumbers {
      * @return sequence element
      */
     public double getElement(int index) {
-        if (index < 0) {
-            return sequence.get(0);
-        } else if (index > sequence.size()) {
-            return sequence.get(sequence.size());
-        } else {
             return sequence.get(index);
-        }
     }
 
     /**
-     * Prints sequence elements in output file.
+     * Prints sequence elements in string.
      *
-     * @param printWriter text-output stream
+     * @return string with sequence real numbers
      */
-    public void printSequence(PrintWriter printWriter) {
-        printWriter.print("Sequence: |");
+    public String printSequence() {
+        String sequence = "Sequence: |";
         for (int i = 0; i < getSize(); i++) {
-            printWriter.print(getElement(i) + "|");
+            sequence += getElement(i) + "|";
         }
-        printWriter.println();
+        return sequence;
     }
 
     /**
@@ -135,6 +128,10 @@ public class SequenceRealNumbers {
         Collections.sort(sequence);
         String mods = "Mods: \n" + sequence.get(0) + "| ";
         for (int i = 0; i < getSize(); i++) {
+            if(i == 0) {
+                mods += "#";
+                continue;
+            }
             if (Double.compare(getElement(i), getElement(i - 1)) == 0) {
                 mods += "#";
             } else {

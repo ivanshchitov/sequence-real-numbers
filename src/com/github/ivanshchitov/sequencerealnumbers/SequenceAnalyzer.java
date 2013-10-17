@@ -73,7 +73,7 @@ class SequenceAnalyzer {
      */
     private void outputSequenceData(SequenceRealNumbers sequenceRealNumbers,
                                    PrintWriter printWriter) throws FileNotFoundException {
-        sequenceRealNumbers.printSequence(printWriter);
+        printWriter.println(sequenceRealNumbers.printSequence());
         printWriter.println("Maximum number: " + sequenceRealNumbers.getMaximum());
         printWriter.println("Minimum number: " + sequenceRealNumbers.getMinimum());
         printWriter.println("Average number: " + sequenceRealNumbers.getAverage());
