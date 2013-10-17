@@ -58,19 +58,48 @@ public class SequenceRealNumbersTest {
     }
 
     /**
-     * Tests getMinimum() method.
+     * Tests getMinimum() method with one element.
      */
     @Test
-    public void getMinimumTest() {
+    public void getMinimumTest1() {
         SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
         sequenceTest.add(1.0);
-        sequenceTest.add(0.2);
-        sequenceTest.add(3);
         assertEquals(
-                Double.doubleToLongBits(0.2),
+                Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished test on getMinimum() method.");
+        System.out.println("Finished test on getMinimum() method with one element.");
+    }
+
+    /**
+     * Tests getMinimum() method with same element.
+     */
+    @Test
+    public void getMinimumTest2() {
+        SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
+        sequenceTest.add(1.0);
+        sequenceTest.add(1.0);
+        sequenceTest.add(1.0);
+        assertEquals(
+                Double.doubleToLongBits(1),
+                Double.doubleToLongBits(sequenceTest.getMinimum())
+        );
+        System.out.println("Finished test on getMinimum() method with same element.");
+    }
+
+    /**
+     * Tests getMinimum() method with negative element.
+     */
+    @Test
+    public void getMinimumTest3() {
+        SequenceRealNumbers sequenceTest = new SequenceRealNumbers();
+        sequenceTest.add(-1.0);
+        sequenceTest.add(-2.0);
+        assertEquals(
+                Double.doubleToLongBits(-2),
+                Double.doubleToLongBits(sequenceTest.getMinimum())
+        );
+        System.out.println("Finished test on getMinimum() method with negative element.");
     }
 
     /**
