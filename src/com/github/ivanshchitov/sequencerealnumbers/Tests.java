@@ -23,7 +23,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished getMaximumTest1.");
     }
 
     /**
@@ -39,7 +38,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished getMaximumTest2.");
     }
 
     /**
@@ -54,7 +52,6 @@ public class Tests {
                 Double.doubleToLongBits(-1),
                 Double.doubleToLongBits(sequenceTest.getMaximum())
         );
-        System.out.println("Finished getMaximumTest3.");
     }
 
     /**
@@ -68,7 +65,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished getMinimumTest1.");
     }
 
     /**
@@ -84,7 +80,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished getMinimumTest2.");
     }
 
     /**
@@ -99,7 +94,6 @@ public class Tests {
                 Double.doubleToLongBits(-2),
                 Double.doubleToLongBits(sequenceTest.getMinimum())
         );
-        System.out.println("Finished getMinimumTest3.");
     }
 
     /**
@@ -115,7 +109,6 @@ public class Tests {
                 Double.doubleToLongBits(0),
                 Double.doubleToLongBits(sequenceTest.getAverage())
         );
-        System.out.println("Finished getAverageTest1.");
     }
 
     /**
@@ -131,7 +124,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getAverage())
         );
-        System.out.println("Finished getAverageTest2.");
     }
 
     /**
@@ -146,7 +138,6 @@ public class Tests {
                 Double.doubleToLongBits(1.1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
         );
-        System.out.println("Finished evenSizeSequenceMedian.");
     }
 
     /**
@@ -160,7 +151,6 @@ public class Tests {
                 Double.doubleToLongBits(1),
                 Double.doubleToLongBits(sequenceTest.getMedian())
         );
-        System.out.println("Finished unevenSizeSequenceMedian.");
     }
 
     /**
@@ -176,7 +166,6 @@ public class Tests {
                 Double.doubleToLongBits(3),
                 Double.doubleToLongBits(sequenceTest.getSize())
         );
-        System.out.println("Finished getSizeTest.");
     }
 
     /**
@@ -189,7 +178,7 @@ public class Tests {
         try {
             sequenceTest.getElement(-1);
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Finished getElementTest.");
+
         }
     }
 }
