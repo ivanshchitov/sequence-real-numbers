@@ -66,7 +66,7 @@ public class SequenceRealNumbers {
      * @return average value of sequence
      */
     public double getAverage() {
-        int sumSequence = 0;
+        double sumSequence = 0;
         for (int i = 0; i < sequence.size(); i++) {
             sumSequence += sequence.get(i);
         }
